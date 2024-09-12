@@ -1,0 +1,19 @@
+#nameForm {
+  color: brown;
+  font-size: 20px;
+  margin-left: 50px;
+}
+#TextArea {
+  margin-left: 10px;
+}
+#Textbox {
+  margin-left: 15px;
+  width: 175px;
+}
+#FileBox {
+  margin-left: 17px;
+  width: 175px;
+}
+body {
+  background-color: hwb(180 35% 18%);
+}

@@ -1,0 +1,12 @@
+body {
+  background-image: url(./5-Giong-Cho-Long-Xu-.jpg);
+}
+h2 {
+  /* opacity: 0.2; */
+  /* display: none; */
+  visibility: hidden;
+  background-color: aqua;
+}
+span {
+  visibility: visible;
+}

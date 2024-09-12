@@ -1,0 +1,16 @@
+p {
+  text-align: center;
+  font: 100px;
+}
+.buttons {
+  margin-left: 120px;
+}
+body {
+  background-color: aquamarine;
+}
+#name {
+  margin-left: 30px;
+}
+#password {
+  margin-left: 31px;
+}
