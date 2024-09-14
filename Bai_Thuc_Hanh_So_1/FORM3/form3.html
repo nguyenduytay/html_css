@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style3.css" />
+    <title>Form 3</title>
+    <script>
+      function loadPage(url) {
+        document.getElementById("content-frame").src = url;
+      }
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuItems = document.querySelectorAll("#menu-list li");
+
+        menuItems.forEach((item) => {
+          item.addEventListener("click", function () {
+            // Xóa class 'active' khỏi tất cả các mục
+            menuItems.forEach((i) => i.classList.remove("active"));
+            // Thêm class 'active' cho mục được click
+            this.classList.add("active");
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <table class="table1" border="0">
+      <tr>
+        <td>
+          <img src="./img/logo.png" alt="ảnh lô gô" />
+        </td>
+        <td>
+          <div class="nameSchool">TRƯỜNG ĐẠI HỌC BÁCH KHOA</div>
+          <br />
+          <div class="nameDepartment">KHOA CÔNG NGHỆ THÔNG TIN</div>
+        </td>
+        <td>
+          <input
+            type="text"
+            id="check"
+            name="check"
+            value=""
+            placeholder="Tìm kiếm thông tin"
+          />
+        </td>
+      </tr>
+    </table>
+    <table class="table2" border="0" width="100%" hight="100%">
+      <!-- hàng 1 -->
+      <tr>
+        <td>
+          <div class="tag1">
+            <a onclick="loadPage('./tag1/home.html')">HOME</a>
+            <a onclick="loadPage('./tag1/gioithieu.html')">GIỚi THIỆU</a>
+            <a onclick="loadPage('./tag1/tuyensinh.html')">TUYỂN SINH</a>
+            <a onclick="loadPage('./tag1/daotao.html')">ĐÀO TẠO</a>
+            <a onclick="loadPage('./tag1/nghiencuukhoahoc.html')"
+              >NGHIÊN CỨU KHOA HỌC</a
+            >
+            <a onclick="loadPage('./tag1/hoptac.html')">HỢP TÁC</a>
+            <a onclick="loadPage('./tag1/sinhvien.html')">SINH VIÊN</a>
+            <a onclick="loadPage('./tag1/cuusinhvien.html')">CỰU SINH VIÊN</a>
+          </div>
+        </td>
+      </tr>
+      <!-- hàng 2 -->
+      <tr>
+        <td>
+          <div class="tagAdmin">Trang chủ / Khoa Công nghệ thông tin</div>
+        </td>
+      </tr>
+      <!-- hàng 3 -->
+      <tr>
+        <td>
+          <div class="tag2">
+            <h3>K. Công nghệ thông tin</h3>
+            <ul id="menu-list">
+              <li>
+                <a href="#" onclick="loadPage('./tag2/thongbao.html')"
+                  >Thông Báo</a
+                >
+              </li>
+              <li>
+                <a href="#" onclick="loadPage('./tag2/tintuchoatdong.html')"
+                  >Tin Tức Hoạt Động</a
+                >
+              </li>
+              <li>
+                <a href="#" onclick="loadPage('./tag2/daotaodaihoc.html')"
+                  >Đào Tạo Đại Học</a
+                >
+              </li>
+              <li>
+                <a href="#" onclick="loadPage('./tag2/daotaosaudaihoc.html')"
+                  >Đào Tạo Sau Đại Học</a
+                >
+              </li>
+              <li>
+                <a href="#" onclick="loadPage('./tag2/nghiencuukhoahoc.html')"
+                  >Nghiên cứu khoa học</a
+                >
+              </li>
+              <li>
+                <a href="#" onclick="loadPage('./tag2/bieumaucuakhoa.html')"
+                  >Biểu mẫu của khoa</a
+                >
+              </li>
+              <li>
+                <a href="#" onclick="loadPage('./tag2/gopyvoikhoa.html')"
+                  >Góp ý với khoa</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="iframe">
+            <iframe
+              src="./tag2/thongbao.html"
+              id="content-frame"
+              frameborder="0"
+              width="860px"
+              height="400px"
+            ></iframe>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

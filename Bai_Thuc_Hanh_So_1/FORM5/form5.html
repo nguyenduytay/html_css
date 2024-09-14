@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form 5</title>
+    <script language="javaScript">
+      function getTextValue() {
+        var inputValue = document.getElementById("name").value;
+        var index = inputValue.length;
+        var newText = "";
+        for (var i = 0; i < index; i++) {
+          if (inputValue[i] >= "a" && inputValue[i] <= "z")
+            newText += String.fromCharCode(inputValue[i].charCodeAt(0) - 32);
+          else newText += inputValue[i];
+        }
+        document.getElementById("name").value = newText;
+      }
+    </script>
+  </head>
+  <body>
+    <input
+      type="text"
+      id="name"
+      name="textinput"
+      value=""
+      onblur="getTextValue()"
+    />
+  </body>
+</html>

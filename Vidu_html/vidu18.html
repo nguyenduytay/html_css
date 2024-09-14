@@ -1,0 +1,128 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu Sidebar</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      .sidebar {
+        width: 250px;
+        border: 1px solid #ccc;
+      }
+
+      .sidebar h3 {
+        margin: 0;
+        padding: 10px;
+        background-color: #f5f5f5;
+        border-bottom: 1px solid #ccc;
+        text-transform: uppercase;
+        font-size: 16px;
+      }
+
+      .sidebar ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .sidebar ul li {
+        border-bottom: 1px dashed #ddd;
+      }
+
+      .sidebar ul li a {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        color: #333;
+      }
+
+      .sidebar ul li a:hover {
+        background-color: #f0f0f0;
+      }
+
+      .sidebar ul li.active a {
+        background-color: #007bff;
+        color: white;
+      }
+
+      .sidebar ul li a::after {
+        content: "›";
+        float: right;
+        color: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sidebar">
+      <h3>K. Công nghệ thông tin</h3>
+      <ul id="menu-list">
+        <li><a href="#">Thông báo</a></li>
+        <li><a href="#">Tin tức hoạt động</a></li>
+        <li><a href="#">Đào tạo đại học</a></li>
+        <li><a href="#">Đào tạo sau đại học</a></li>
+        <li><a href="#">Nghiên cứu khoa học</a></li>
+        <li><a href="#">Biểu mẫu của Khoa</a></li>
+        <li><a href="#">Góp ý với Khoa</a></li>
+      </ul>
+    </div>
+
+    <script>
+      // Lấy tất cả các mục li trong menu
+      const menuItems = document.querySelectorAll("#menu-list li");
+
+      // Thêm sự kiện click cho từng mục
+      menuItems.forEach((item) => {
+        item.addEventListener("click", function () {
+          // Xóa class 'active' khỏi tất cả các mục
+          menuItems.forEach((i) => i.classList.remove("active"));
+
+          // Thêm class 'active' cho mục được click
+          this.classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ảnh và Chữ Ngang Hàng</title>
+    <style>
+      ul {
+        list-style-type: none; /* Loại bỏ dấu chấm đầu dòng */
+        padding: 0;
+      }
+      li {
+        display: flex; /* Sử dụng flexbox để căn chỉnh */
+        align-items: center; /* Căn chỉnh theo chiều dọc */
+        margin-bottom: 10px; /* Tạo khoảng cách giữa các thẻ li */
+      }
+      img {
+        margin-right: 10px; /* Tạo khoảng cách giữa ảnh và chữ */
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <img src="image1.png" alt="Image 1" width="50" height="50" />
+        <span>Đây là văn bản đi kèm với ảnh 1.</span>
+      </li>
+      <li>
+        <img src="image2.png" alt="Image 2" width="50" height="50" />
+        <span>Đây là văn bản đi kèm với ảnh 2.</span>
+      </li>
+      <li>
+        <img src="image3.png" alt="Image 3" width="50" height="50" />
+        <span>Đây là văn bản đi kèm với ảnh 3.</span>
+      </li>
+    </ul>
+  </body>
+</html>
