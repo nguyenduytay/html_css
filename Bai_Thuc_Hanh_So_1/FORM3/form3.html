@@ -14,9 +14,7 @@
 
         menuItems.forEach((item) => {
           item.addEventListener("click", function () {
-            // Xóa class 'active' khỏi tất cả các mục
             menuItems.forEach((i) => i.classList.remove("active"));
-            // Thêm class 'active' cho mục được click
             this.classList.add("active");
           });
         });
@@ -40,7 +38,7 @@
             id="check"
             name="check"
             value=""
-            placeholder="Tìm kiếm thông tin"
+            placeholder="Tìm kiếm thông tin "
           />
         </td>
       </tr>
@@ -114,7 +112,7 @@
           </div>
           <div class="iframe">
             <iframe
-              src="./tag2/thongbao.html"
+              src="./tag2/tintuchoatdong.html"
               id="content-frame"
               frameborder="0"
               width="860px"

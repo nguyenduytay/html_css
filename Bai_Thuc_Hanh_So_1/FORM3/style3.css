@@ -1,17 +1,21 @@
 .nameSchool {
   color: rgb(19, 101, 208);
   margin-left: 15px;
-  font-size: 15px;
+  font-size: 20px;
 }
 .nameDepartment {
   color: #007bff;
   margin-left: 15px;
-  font-size: 17px;
+  font-size: 25px;
 }
 #check {
   position: absolute;
   right: 5px;
   top: 5px;
+  width: 200px;
+  padding: 5px;
+  border-radius: 15px;
+  outline: none;
 }
 .tag1 a {
   display: inline-block;
@@ -61,24 +65,23 @@
   color: #333;
 }
 .tag2 ul li a:hover {
-  background-color: #f0f0f0;
+  background-color: rgb(75, 112, 207);
 }
 .tag2 ul li.active a {
-  background-color: #007bff;
-  color: white;
+  background-color: white;
+  color: blue;
 }
 .tag2 ul li a::after {
-  content: "›";
   float: right;
   color: #ccc;
 }
 .tagAdmin {
   margin-top: 10px;
-  background-color: #f0f0f0; /* Nền màu xám nhạt */
-  border-radius: 10px; /* Bo góc tròn */
-  padding: 10px 20px; /* Khoảng cách giữa nội dung và viền */
-  border: 1px solid #ccc; /* Viền màu xám */
-  font-family: Arial, sans-serif; /* Font chữ mặc định */
+  background-color: #cfcfcf;
+  border-radius: 10px;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  font-family: Arial, sans-serif;
 }
 .iframe {
   margin-left: 270px;
