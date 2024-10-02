@@ -65,11 +65,11 @@
   color: #333;
 }
 .tag2 ul li a:hover {
-  background-color: rgb(75, 112, 207);
+  background-color: dodgerblue;
 }
 .tag2 ul li.active a {
   background-color: white;
-  color: blue;
+  color: dodgerblue;
 }
 .tag2 ul li a::after {
   float: right;
@@ -85,4 +85,20 @@
 }
 .iframe {
   margin-left: 270px;
+}
+.menu-button::after {
+  content: ">";
+}
+.menu-options {
+  display: none;
+}
+.menu-options a {
+  color: black;
+  display: block;
+}
+.menu-options .a {
+  padding-left: 30px;
+}
+.menu:hover .menu-options {
+  display: block;
 }

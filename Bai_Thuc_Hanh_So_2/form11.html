@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style1.css" />
+    <title>Form11</title>
+    <style>
+      body {
+        background-color: aquamarine;
+      }
+      #Form11 {
+        text-align: center;
+      }
+      #name {
+        margin-left: 10px;
+      }
+      #password {
+        margin-left: 12px;
+      }
+      .buttons {
+        padding-left: 50px;
+      }
+      .error {
+        font-size: 12px;
+        color: red;
+      }
+    </style>
+    <script>
+      function exit() {
+        document.getElementById("name").value = "";
+        document.getElementById("password").value = "";
+        document.getElementById("errorMessage_username").textContent = "";
+        document.getElementById("errorMessage_password").textContent = "";
+      }
+      function check() {
+        const username = document.getElementById("name").value;
+        const password = document.getElementById("password").value;
+        const errorMessage = document.getElementById("errorMessage");
+
+         if (username == "") {
+          errorMessage_username.textContent = "Tên đăng nhập không được để trống!!!";
+        }
+         if (password == "") {
+          errorMessage_password.textContent = "Mật khẩu không được để trống!!!";
+        }
+        if(username!="" && password!="")
+        {
+             document.getElementById("errorMessage_username").textContent = "";
+        document.getElementById("errorMessage_password").textContent = "";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <form id="Form11" method="" action="">
+      <p>Login</p>
+      <p>
+        <label for="username">Username</label>
+        <input type="text" id="name" name="name" value="" placeholder="Tên đăng nhập"/>
+        <p id="errorMessage_username" class="error"></p>
+      </p>
+      <p>
+        <label for="pasword">Password</label>
+        <input type="password" id="password" name="password" value="" placeholder="Mật khẩu "/>
+        <p id="errorMessage_password" class="error"></p>
+      </p>
+      <p class="buttons">
+        <input type="button" id="ok" value="OK" onclick="check()" />
+        <input type="button" id="reset" value="RESET" onclick="exit()" />
+      </p>
+    </form>
+  </body>
+</html>

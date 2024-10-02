@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function select() {
+        var select = document.getElementById("name");
+        var selectValue = select.value;
+        var selectText = select.options[select.selectedIndex].text;
+        alert("IDNV:" + selectValue + "Ho ten:" + selectText);
+      }
+    </script>
+  </head>
+  <body>
+    <select name="name" id="name" onchange="select()">
+      <option value="1">Xuan</option>
+      <option value="2">Ha</option>
+      <option value="3">Thu</option>
+      <option value="4">Dong</option>
+    </select>
+  </body>
+</html>

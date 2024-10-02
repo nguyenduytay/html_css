@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form33</title>
+    <style></style>
+    <script>
+      window.onload = function () {
+        document.getElementById("text1").focus();
+      };
+      function convert() {
+        var text = document.getElementById("text1").value;
+        var newText = "";
+        for (let i = 0; i < text.length; i++) {
+          if (text[i] <= "Z" && text[i] >= "A") {
+            newText += String.fromCharCode(text.charCodeAt(i) + 32);
+          }
+          if (text[i] <= "z" && text[i] >= "a") {
+            newText += String.fromCharCode(text.charCodeAt(i) - 32);
+          }
+        }
+        document.getElementById("text2").value = newText;
+      }
+    </script>
+  </head>
+  <body>
+    <form class="form">
+      <input type="text" id="text1" name="input" onblur="convert()" />
+      <input type="text" name="output" id="text2" />
+    </form>
+  </body>
+</html>

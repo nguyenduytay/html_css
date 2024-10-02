@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function calculate() {
+        const value = parseFloat(document.getElementById("value").value);
+        let x = 0;
+        if (document.getElementById("double").checked) {
+          x = value * 2;
+        } else if (document.getElementById("square").checked) {
+          x = value * value;
+        }
+        document.getElementById("result").value = x;
+      }
+    </script>
+  </head>
+  <body>
+    <p>Value <input type="text" id="value" /></p>
+    <p>Action:</p>
+    <p>
+      <input
+        type="radio"
+        name="action"
+        id="double"
+        value="double"
+        onclick="calculate()"
+      />
+      <label for="double">Double</label><br />
+      <input
+        type="radio"
+        name="action"
+        id="square"
+        value="square"
+        onclick="calculate()"
+      />
+      <label for="square">Square</label>
+    </p>
+    <p>Result: <input type="text" id="result" readonly /></p>
+  </body>
+</html>

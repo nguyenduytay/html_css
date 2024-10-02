@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form44</title>
+    <script>
+      function search() {
+        var text = document.getElementById("text").value;
+        var select = document.getElementById("dropdown");
+        var options = select.options;
+        var found = false;
+        for (var i = 0; i < options.length; i++) {
+          if (options[i].value == text) {
+            options.selectedIndex = i;
+            found = true;
+            break;
+          }
+        }
+        if (!found) {
+          alert("Không tìm thấy mục ứng dụng");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <select name="" id="dropdown">
+      <option value="0">Index0</option>
+      <option value="1">Index1</option>
+      <option value="2">Index2</option>
+      <option value="3">Index3</option>
+    </select>
+    <input type="text" name="input" id="text" />
+    <input type="button" value="Click hear" onclick="search()" />
+  </body>
+</html>

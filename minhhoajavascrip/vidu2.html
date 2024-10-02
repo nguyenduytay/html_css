@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function Calculate() {
+        try {
+          var pheptinh = document.getElementsByName("input")[0].value;
+          var ketqua = eval(pheptinh);
+          document.getElementsByName("output")[0].value = ketqua;
+        } catch (error) {
+          document.getElementsByName("output")[0].value = "error";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <p>Nhập biểu thức <input type="text" name="input" /></p>
+    <p>kết quả <input type="text" name="output" /></p>
+    <input
+      type="button"
+      name="Calculate"
+      value="Calculate"
+      onclick="Calculate()"
+    />
+  </body>
+</html>

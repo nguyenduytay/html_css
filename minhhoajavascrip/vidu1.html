@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nhập tên và tuổi</title>
+    <script>
+      window.onload = function () {
+        var name = prompt("Mời bạn nhập vào tên mình:");
+        var age = prompt("Mời bạn nhập vào tuổi mình:");
+
+        if (name && age) {
+          document.getElementById("name").innerText = name;
+          document.getElementById("age").innerText = age;
+        } else {
+          alert("Bạn chưa nhập đủ thông tin!");
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <p>Chào bạn: <span id="name" style="font-weight: bold"></span></p>
+    <p>Tuổi của bạn là: <span id="age" style="font-weight: bold"></span></p>
+
+    <button onclick="alert('Welcome to JavaScript!')">Welcome</button>
+  </body>
+</html>

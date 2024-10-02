@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .text {
+        width: 500px;
+        overflow: hidden;
+        white-space: nowrap;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+      }
+      .text span {
+        display: inline-block;
+        padding-left: 100%;
+        animation: text 10s linear infinite;
+      }
+      @keyframes text {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-100%);
+        }
+      }
+    </style>
+    <script>
+      function load() {
+        document.querySelector(".text-content1").style.visibility = "visible";
+        document.querySelector(".text-content2").style.visibility = "hidden";
+        setTimeout(function () {
+          document.querySelector(".text-content1").style.visibility = "hidden";
+          document.querySelector(".text-content2").style.visibility = "visible";
+          setTimeout(load, 10000);
+        }, 10000);
+      }
+    </script>
+  </head>
+  <body onload="load()">
+    <div class="text" id="text1">
+      <span class="text-content1">Xin chao ban den voi JS_</span>
+    </div>
+    <br />
+    <div class="text" id="text2">
+      <span class="text-content2">Welcome to JavaScript_</span>
+    </div>
+  </body>
+</html>

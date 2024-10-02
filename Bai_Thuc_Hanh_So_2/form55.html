@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form55</title>
+    <script>
+      function onSelectChange() {
+        var select = document.getElementById("dropdown");
+        var selectValue = select.options[select.selectedIndex].value;
+        document.getElementById("text").value = selectValue;
+      }
+    </script>
+  </head>
+  <body>
+    <select name="" id="dropdown" onchange="onSelectChange()">
+      <option value="0">Index0</option>
+      <option value="1">Index1</option>
+      <option value="2">Index2</option>
+      <option value="3">Index3</option>
+    </select>
+    <input type="text" name="input" id="text" value="0" />
+    <input type="button" value="Click hear" onclick="search()" />
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    function tinh(opera) {
+      var value1 = parseFloat(document.getElementsByName("value1")[0].value);
+      var value2 = parseFloat(document.getElementsByName("value2")[0].value);
+      var ketqua = 0;
+      switch (opera) {
+        case "+":
+          ketqua = value1 + value2;
+          break;
+        case "-":
+          ketqua = value1 - value2;
+          break;
+        case "x":
+          ketqua = value1 * value2;
+          break;
+        case "/":
+          ketqua = value1 / value2;
+          break;
+        case "^":
+          ketqua = Math.pow(value1, value2);
+          break;
+        default:
+          ketqua = "lỗi";
+      }
+      document.getElementsByName("ketqua")[0].value = ketqua;
+    }
+  </script>
+  <body>
+    <p>
+      <input type="text" name="value1" />
+      <input type="button" value="+" onclick="tinh('+')" />
+      <input type="button" value="-" onclick="tinh('-')" />
+      <input type="button" value="x" onclick="tinh('x')" />
+      <input type="button" value="/" onclick="tinh('/')" />
+      <input type="button" value="^" onclick="tinh('^')" />
+      <input type="text" name="value2" />
+      =
+      <input type="text" name="ketqua" />
+    </p>
+  </body>
+</html>

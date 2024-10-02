@@ -1,0 +1,24 @@
+#line2:hover {
+  color: red;
+  font-size: 30px;
+}
+#line1:active {
+  color: aqua;
+  font-size: 30px;
+}
+.click_me:link {
+  color: chocolate;
+}
+.div_elm:empty {
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+}
+.div_elm {
+  width: 200px;
+  height: 200px;
+  background-color: black;
+}
+h2:target {
+  color: blue;
+}
